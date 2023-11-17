@@ -1,0 +1,14 @@
+<div class="container border border-light py-4">
+    <button (click) = "onToggleDisplay()">
+        Display details
+    </button>
+
+    <p *ngIf="display" class="my-2">
+        Secret password = tuna
+    </p>
+
+    <p *ngFor="let click of clicks"
+        [ngStyle]="{backgroundColor: getColor()}"
+        [ngClass]="{large: click >= 5}"
+    >{{ click }}</p>
+</div>
