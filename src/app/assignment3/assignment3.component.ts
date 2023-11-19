@@ -17,9 +17,8 @@ export class Assignment3Component {
     this.itr++;
   }
 
-  getColor() {
-    return this.clicks.length >= 5 ? 'blue' : 'white';
-  }
-
+  // getColor() {
+  //   return this.clicks.length >= 5 ? 'blue' : 'white';
+  // }
 
 }
