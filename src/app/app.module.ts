@@ -10,6 +10,7 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { Assignment2Component } from './assignment-2/assignment-2.component';
 import { Assignment3Component } from './assignment3/assignment3.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { Assignment3Component } from './assignment3/assignment3.component';
     SuccessAlertComponent,
     WarningAlertComponent,
     Assignment2Component,
-    Assignment3Component
+    Assignment3Component,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
