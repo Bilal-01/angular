@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Observer, Subscription, interval } from 'rxjs';
 import { Observable } from 'rxjs-compat';
 import { map, filter } from 'rxjs/operators';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   private firstObsSubscription: Subscription;
 
-  constructor() {}
+  constructor(private userService: UserService) {}
 
   ngOnInit(): void {
   
@@ -48,8 +49,12 @@ export class HomeComponent implements OnInit, OnDestroy {
       alert(error.message);
      }, () => {
       console.log("Completed!")
-     })
+     }) 
      
+  }
+
+  onActivate() {
+    this.userService.activateEmitter.next(true);
   }
 
   ngOnDestroy(): void {
